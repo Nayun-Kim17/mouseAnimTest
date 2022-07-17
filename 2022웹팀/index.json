@@ -1,0 +1,17 @@
+
+
+		var container = document.getElementById('firstLottie');
+		var state = 'play';
+
+
+		var animation = bodymovin.loadAnimation({
+			container: document.getElementById('firstLottie'),
+			renderer: 'svg',
+			loop: false,
+			autoplay: false,
+			path: './confetti.json'
+
+			});
+		document.addEventListener('click',() => {
+ 		animation.playSegments([1,66], true);
+ 	})

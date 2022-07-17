@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		*{margin:0 auto;}
+		nav {height: 12vh;
+			background-color: black;
+		}
+		body{
+			margin:0;
+			height:100vh;
+			
+			display: flex;
+		}
+		#firstLottie{
+				 width: 50px;
+				 height: 50px;
+				 top:50%;
+				 left:50%;
+				 z-index: 100;
+				 position: fixed;
+				 border-radius:50%;
+				 background-image: url(./confetti.json);
+				 background-position: center;
+				 background-repeat: no-repeat;
+				 pointer-events: none;
+				 box-sizing: border-box;
+				 transition:0.2s;
+				}
+	</style>
+</head>
+<body>
+	<nav>서울과학기술대학교 시각디자인 40회 졸업전시</nav>
+
+	<div id="firstLottie" class="firstLottie" style=""> </div>
+	<script src="./lottie.js" type="text/javascript"></script>
+	<script src="./index.json"></script>
+	<script type="text/javascript">
+		
+  	var cursor = document.querySelector(".firstLottie");
+  	document.addEventListener("mousemove",function(e){
+  		cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+  	})
+
+
+  
+	</script>
+          
+
+</body>
+</html>
